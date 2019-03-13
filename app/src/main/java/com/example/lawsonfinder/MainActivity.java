@@ -14,13 +14,15 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        ListView locationListView = (ListView) findViewById(R.id.locationListView);
-        // show an array list of data in the view
-        ArrayList<String> locationList = new ArrayList<String>();
-        locationList.add("Bakurokoyama");
-        locationList.add("Shibuya");
+//        make the listView appear inside the bottom navigation view
 
-        ArrayAdapter<String> mArrayAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, locationList);
-        locationListView.setAdapter(mArrayAdapter);
+//        ListView locationListView = (ListView) findViewById(R.id.locationListView);
+//        // show an array list of data in the view
+//        ArrayList<String> locationList = new ArrayList<String>();
+//        locationList.add("Bakurokoyama");
+//        locationList.add("Shibuya");
+//
+//        ArrayAdapter<String> mArrayAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, locationList);
+//        locationListView.setAdapter(mArrayAdapter);
     }
 }
