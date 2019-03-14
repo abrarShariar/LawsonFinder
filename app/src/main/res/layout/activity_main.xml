@@ -8,30 +8,25 @@
 
     <android.support.v7.widget.GridLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true"
+        android:layout_height="match_parent"
         app:columnCount="2"
         app:rowCount="2"
         >
 
         <Button
-            android:layout_height="wrap_content"
-            android:layout_width="wrap_content"
-            app:layout_column="0"
-            app:layout_row="0"
-            app:layout_gravity="fill"
+            android:id="@+id/lawson_btn"
+            android:layout_width="50sp"
+            android:layout_height="50sp"
+            android:shadowColor="@color/colorPrimaryDark"
             android:text="Lawson"
-            app:layout_columnWeight="1"
-            app:layout_rowWeight="1"
-            />
+            app:layout_column="0"
+            app:layout_gravity="fill"
+            app:layout_row="0" />
 
         <Button
-            android:layout_height="wrap_content"
-            android:layout_width="wrap_content"
+            android:id="@+id/location_btn"
+            android:layout_height="50sp"
+            android:layout_width="50sp"
             app:layout_column="1"
             app:layout_row="0"
             app:layout_gravity="fill"
@@ -41,8 +36,9 @@
             />
 
         <Button
-            android:layout_height="wrap_content"
-            android:layout_width="wrap_content"
+            android:id="@+id/ponta_btn"
+            android:layout_height="50sp"
+            android:layout_width="50sp"
             app:layout_column="0"
             app:layout_row="1"
             app:layout_gravity="fill"
@@ -53,8 +49,9 @@
 
 
         <Button
-            android:layout_height="wrap_content"
-            android:layout_width="wrap_content"
+            android:id="@+id/notifcation_btn"
+            android:layout_height="50sp"
+            android:layout_width="50sp"
             app:layout_column="1"
             app:layout_row="1"
             app:layout_gravity="fill"
