@@ -3,5 +3,6 @@
     <string name="menu_my_location">My Location</string>
     <string name="menu_lawson_list">Lawson</string>
     <string name="menu_notifications">Notifications</string>
+    <string name="title_activity_maps">Map</string>
 
 </resources>

@@ -1,8 +1,12 @@
 package com.example.lawsonfinder;
 
+import android.app.Activity;
+import android.content.Intent;
 import android.graphics.Color;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
+import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
 
@@ -14,6 +18,8 @@ public class MainActivity extends AppCompatActivity {
     ImageButton lawsonBtn;
     ImageButton notificationBtn;
     ImageButton pontaBtn;
+
+    Activity self = this;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,6 +43,18 @@ public class MainActivity extends AppCompatActivity {
 //
 //        ArrayAdapter<String> mArrayAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, locationList);
 //        locationListView.setAdapter(mArrayAdapter);
+
+//        start new activity when location btn clicked
+            locationBtn.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Log.d("onClick", "Start location activity");
+//                    Need google maps API key - BLOCK  
+//                    Intent intent = new Intent(self, MapsActivity.class);
+//                    startActivity(intent);
+                }
+            });
+
     }
 
     private void setButtonBackground () {
