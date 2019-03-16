@@ -49,9 +49,8 @@ public class MainActivity extends AppCompatActivity {
                 @Override
                 public void onClick(View v) {
                     Log.d("onClick", "Start location activity");
-//                    Need google maps API key - BLOCK  
-//                    Intent intent = new Intent(self, MapsActivity.class);
-//                    startActivity(intent);
+                    Intent intent = new Intent(self, MapsActivity.class);
+                    startActivity(intent);
                 }
             });
 
