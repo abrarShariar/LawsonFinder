@@ -4,15 +4,16 @@ import android.graphics.Color;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.Button;
+import android.widget.ImageButton;
 
 public class MainActivity extends AppCompatActivity {
 
 
 //    to-do: put these into a Button List
-    Button locationBtn;
-    Button lawsonBtn;
-    Button notificationBtn;
-    Button pontaBtn;
+    ImageButton locationBtn;
+    ImageButton lawsonBtn;
+    ImageButton notificationBtn;
+    ImageButton pontaBtn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,9 +41,16 @@ public class MainActivity extends AppCompatActivity {
 
     private void setButtonBackground () {
 //        loop and set color
-        lawsonBtn.setBackgroundColor(Color.RED);
-        locationBtn.setBackgroundColor(Color.BLUE);
-        notificationBtn.setBackgroundColor(Color.GREEN);
-        pontaBtn.setBackgroundColor(Color.YELLOW);
+//        lawsonBtn.setBackgroundColor(Color.RED);
+//        locationBtn.setBackgroundColor(Color.BLUE);
+//        notificationBtn.setBackgroundColor(Color.GREEN);
+//        pontaBtn.setBackgroundColor(Colo r.YELLOW);
+
+        lawsonBtn.setBackgroundColor(Color.BLACK);
+        locationBtn.setBackgroundColor(Color.WHITE);
+        notificationBtn.setBackgroundColor(Color.WHITE);
+        pontaBtn.setBackgroundColor(Color.BLACK);
+
+
     }
 }

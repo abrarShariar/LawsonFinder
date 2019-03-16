@@ -13,51 +13,57 @@
         app:rowCount="2"
         >
 
-        <Button
+        <ImageButton
             android:id="@+id/lawson_btn"
             android:layout_width="50sp"
             android:layout_height="50sp"
             android:shadowColor="@color/colorPrimaryDark"
-            android:text="Lawson"
             app:layout_column="0"
             app:layout_gravity="fill"
-            app:layout_row="0" />
+            app:layout_row="0"
+            android:src="@drawable/lawson_logo"
+            />
 
-        <Button
+        <ImageButton
             android:id="@+id/location_btn"
             android:layout_height="50sp"
             android:layout_width="50sp"
             app:layout_column="1"
             app:layout_row="0"
             app:layout_gravity="fill"
-            android:text="My Location"
             app:layout_columnWeight="1"
             app:layout_rowWeight="1"
+            android:src="@drawable/location_logo"
+            android:scaleType="fitCenter"
             />
 
-        <Button
-            android:id="@+id/ponta_btn"
+        <ImageButton
+            android:id="@+id/notifcation_btn"
             android:layout_height="50sp"
             android:layout_width="50sp"
             app:layout_column="0"
             app:layout_row="1"
             app:layout_gravity="fill"
-            android:text="Ponta"
             app:layout_columnWeight="1"
             app:layout_rowWeight="1"
+            android:src="@drawable/notification_logo"
+            android:scaleType="fitCenter"
             />
 
 
-        <Button
-            android:id="@+id/notifcation_btn"
-            android:layout_height="50sp"
-            android:layout_width="50sp"
+        <ImageButton
+            android:id="@+id/ponta_btn"
+            android:layout_height="45sp"
+            android:layout_width="45sp"
             app:layout_column="1"
             app:layout_row="1"
             app:layout_gravity="fill"
-            android:text="Notifications"
             app:layout_columnWeight="1"
             app:layout_rowWeight="1"
+            android:paddingLeft="5sp"
+            android:paddingRight="5sp"
+            android:src="@drawable/ponta_logo"
+            android:scaleType="fitCenter"
             />
 
 
