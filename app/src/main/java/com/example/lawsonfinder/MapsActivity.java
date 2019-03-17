@@ -1,5 +1,6 @@
 package com.example.lawsonfinder;
 
+import android.app.Activity;
 import android.location.Location;
 import android.location.LocationListener;
 import android.location.LocationManager;
@@ -15,15 +16,23 @@ import com.google.android.gms.maps.model.MarkerOptions;
 
 public class MapsActivity extends FragmentActivity implements OnMapReadyCallback {
 
+    Activity self = this;
+
     private GoogleMap mMap;
+    public double latitude;
+    public double longitude;
+    private int LOCATION_REFRESH_TIME = 300000;
+    private int LOCATION_REFRESH_DISTANCE = 5;
 
     // Declaring a Location Manager
-    protected LocationManager locationManager;
+    protected LocationManager mLocationManager;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_maps);
+        mLocationManager = (LocationManager) getSystemService(this.LOCATION_SERVICE);
+
         // Obtain the SupportMapFragment and get notified when the map is ready to be used.
         SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager()
                 .findFragmentById(R.id.map);
@@ -31,12 +40,9 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 
         mLocationManager = (LocationManager) getSystemService(LOCATION_SERVICE);
 
-        mLocationManager.requestLocationUpdates(LocationManager.GPS_PROVIDER, LOCATION_REFRESH_TIME,
-                LOCATION_REFRESH_DISTANCE, mLocationListener);
+        mLocationManager.requestLocationUpdates(LocationManager.GPS_PROVIDER, LOCATION_REFRESH_TIME,LOCATION_REFRESH_DISTANCE, mLocationListener);
 
-
-//        GET THE CURRENT LOCATION OF USER
-        LocationManager locationManager = (LocationManager) getSystemService(this.LOCATION_SERVICE);
+        // GET THE CURRENT LOCATION OF USER
 
     }
 
@@ -44,7 +50,20 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         @Override
         public void onLocationChanged(final Location location) {
             //your code here
+//            latitude = Double.toString(location.getLatitude());
+//            longitudeDouble.toString( = Double.toString(location.getLongitude());
+            latitude = location.getLatitude();
+            longitude = location.getLongitude();
         }
+
+        @Override
+        public void onProviderDisabled (String data) { }
+
+        @Override
+        public void onProviderEnabled (String data) { }
+
+        @Override
+        public void onStatusChanged (String data, int intData, Bundle bundle) { }
     };
 
 
@@ -62,8 +81,8 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         mMap = googleMap;
 
         // Add a marker in Sydney and move the camera
-        LatLng sydney = new LatLng(-34, 151);
-        mMap.addMarker(new MarkerOptions().position(sydney).title("Marker in Sydney"));
-        mMap.moveCamera(CameraUpdateFactory.newLatLng(sydney));
+        LatLng myLocation = new LatLng(latitude, longitude);
+        mMap.addMarker(new MarkerOptions().position(myLocation).title("Marker in my location"));
+        mMap.moveCamera(CameraUpdateFactory.newLatLng(myLocation));
     }
 }
